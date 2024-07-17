@@ -1,0 +1,29 @@
+{{#> index title="Home"}}
+  <div class="flex flex-row bg-crust p-2 w-screen justify-around">
+    <p class="my-auto">Home</p>
+    <button onclick="window.location.href='/files/'" class="">View your files</button>
+</div>
+<div class="lg:w-3/4 mx-auto">
+    <h1>Home - Broadway Session Manager</h1>
+    <div class="flex flex-row justify-between">
+        <h2>Welcome, {{username}}</h2>
+        <p class="font-sm mt-4">You are a {{role}}</p>
+    </div>
+    <div class="min-h-56">
+        <div class='flex flex-wrap justify-center items-center'>
+        {{#each boxes}}
+            {{> partials/defaultBox 
+                start_request_to=start_request_to
+                headline=headline 
+                description=description 
+                option_box=option_box
+                bg_color=bg_color
+                options=options}}
+        {{/each}}
+    </div>
+
+    <div id="loading" style="display: none;">
+        {{> partials/loading}}
+    </div>
+</div>
+{{/index}}

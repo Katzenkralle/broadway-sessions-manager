@@ -1,0 +1,55 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-base text-text
+}
+
+h1 {
+  @apply text-4xl font-bold;
+}
+
+h2 {
+  @apply text-3xl;
+}
+
+h3 {
+  @apply text-2xl;
+}
+
+h4 {
+  @apply text-xl;
+}
+
+h5 {
+  @apply text-lg;
+}
+
+input, button, button[type="submit"] {
+    @apply bg-mantle text-text p-2 rounded-lg placeholder:text-text;
+}
+
+.innerBox {
+  @apply py-2 px-3;
+}
+
+.optionsStatus {
+  @apply text-crust font-bold mb-3 text-wrap break-all;
+}
+
+.optionsInput {
+  @apply mx-auto w-full
+}
+.overlay {
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}

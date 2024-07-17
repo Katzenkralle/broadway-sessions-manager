@@ -1,0 +1,12 @@
+{{ #with options }}
+<div class='optionBox' id="adminInviteBox">
+    {{#if this}}
+        <p class="optionsStatus">{{ this.AdminInvite }}</p>
+    {{/if}}
+    <div class="optionsInput">
+            <button onclick="postButton('/api/createInvite', 'adminInviteBox')">Create a new Key</button>
+            <button onclick="postButton('/api/delInvite', 'adminInviteBox')">Delete all keys</button>
+    </div>
+</div>
+
+{{/with}}

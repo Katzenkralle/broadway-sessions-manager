@@ -1,0 +1,9 @@
+{{#> index title="Error"}}
+<div class="error_block">
+    <p class="font-bold text-red">{{ error.error }}</p>
+    <p> {{ error.message }}</p>
+    {{#each error.options}}
+        <button onclick="window.location.href='{{location}}'">{{ name }}</button>
+    {{/each}}
+</div>
+{{/index}}

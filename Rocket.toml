@@ -1,0 +1,19 @@
+## defaults for _all_ profiles
+[default]
+address = "0.0.0.0"
+limits = { form = "64 kB", json = "1 MiB" }
+template_dir = "web_api/public/templates"
+temp_dir="tmp"
+
+## set only when compiled in debug mode, i.e, `cargo build`
+[debug]
+port = 9999
+## only the `json` key from `default` will be overridden; `form` will remain
+limits = { json = "10MiB" }
+
+
+## set only when compiled in release mode, i.e, `cargo build --release`
+[release]
+port = 9999
+ip_header = false
+secret_key = "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"

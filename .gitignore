@@ -1,0 +1,5 @@
+/target
+node_modules
+data/user-home/*
+tmp/
+vroot_config/context.tar

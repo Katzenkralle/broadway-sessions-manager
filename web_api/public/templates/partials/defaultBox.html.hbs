@@ -1,0 +1,17 @@
+<div class='flex flex-col rounded-lg m-3 w-1/3 w-[430px] text-base overflow-hidden'>
+    <div 
+    style="background-color: {{ bg_color }};"
+    class="innerBox w-full {{#if start_request_to}} cursor-pointer {{/if}}"
+         onclick="postButton('{{ start_request_to }}', '{{ option_box }}')">
+        <h3 class='infoHl mb-2'>{{ headline }}</h3>
+        <div class='whitespace-normal'>
+            {{ description }}
+        </div>
+    </div>
+    <div 
+    style="background-color: {{ bg_color }}80;"
+    class="innerBox" 
+    id="{{ option_box }}">
+        {{> (lookup this "option_box") options=options}}
+    </div>
+</div>

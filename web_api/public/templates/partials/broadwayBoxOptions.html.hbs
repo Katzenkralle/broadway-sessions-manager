@@ -1,0 +1,13 @@
+{{ #with options }}
+<div class='optionBox'>
+    <p class="optionsStatus">{{ status_msg }}</p>
+    <div class="optionsInput">
+        {{#if session_exists}}
+            <button onclick="window.location.href='/session/{{container_ip}}/{{gtk3_port}}'">GTK 3</button>
+            <button onclick="window.location.href='/session/{{container_ip}}/{{gtk4_port}}'">GTK 4</button>
+            <button onclick="postButton('/api/end/gtk', 'partials/broadwayBoxOptions')">End Session</button>
+        {{/if}}
+    </div>
+</div>
+
+{{/with}}

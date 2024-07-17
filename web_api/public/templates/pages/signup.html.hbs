@@ -1,0 +1,17 @@
+{{#> index title="SignUp"}}
+<div class="flex flex-col justify-center">
+    <div class="flex flex-col mx-auto mt-10">
+        <h1 >Broadway Session Manager</h1>
+        <h2 class="mx-auto">SignUp</h2>
+        <form class="flex flex-col mt-3" action="/signup" method="post">
+            <div>
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="text" name="invite_key" placeholder="Invite Key">
+            </div>
+            <button type="submit" class="mt-2">Signup</button>
+        </form>
+        <p>{{err}}</p>
+    </div>
+</div>
+{{/index}}

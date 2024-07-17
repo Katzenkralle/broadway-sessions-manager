@@ -1,0 +1,15 @@
+{
+    "sqltools.useNodeRuntime": true,
+    "sqltools.connections": [
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "${workspaceFolder:app}/data/db.sqlite",
+            "name": "main_db"
+        }
+    ],
+    "git.ignoreLimitWarning": true,
+    "rust-analyzer.linkedProjects": [
+        "./web_api/Cargo.toml"
+    ]
+}

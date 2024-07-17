@@ -1,0 +1,17 @@
+[
+    {
+        "app": "rnote",
+        "gtk": 4,
+        "args": " "
+    },
+    {
+        "app": "nemo",
+        "gtk": 3,
+        "args": " "
+    },
+    {
+        "app": "gnome-terminal",
+        "gtk": 3,
+        "args": " "
+    }
+]

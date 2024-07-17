@@ -1,0 +1,28 @@
+FROM alpine
+
+# Essentials
+RUN apk add gtk+3.0 gtk4.0 bash jq gsettings-desktop-schemas 
+
+# Fonts
+RUN apk add font-terminus font-inconsolata font-dejavu font-noto font-noto-cjk font-awesome font-noto-extra
+
+# Apps
+RUN apk add nemo gnome-terminal
+RUN apk add rnote --repository=http://dl-cdn.alpinelinux.org/alpine/edge/testing/
+
+# Config
+RUN adduser --home /home/gtk-user --disabled-password gtk-user 
+COPY apps.json /apps.json
+COPY watchdog.sh /watchdog.sh
+
+RUN chmod 400 /apps.json
+RUN chmod 500 /watchdog.sh
+
+ENV GDK_BACKEND=broadway
+ENV BROADWAY_3_PORT=2000
+ENV BROADWAY_3_SESSION=:1
+ENV BROADWAY_4_PORT=2001
+ENV BROADWAY_4_SESSION=:2
+
+
+CMD ["/bin/bash", "/watchdog.sh"]
