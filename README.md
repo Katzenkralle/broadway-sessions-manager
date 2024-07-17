@@ -1,6 +1,8 @@
 # Broadway Session Manager
 
 ### Introduction
+This app is still in early development, thus a database with `someone` `Was` as admin user is provided by default. Additionally this app is made for linux hosts only.
+
 This web service allows multiple concurrent users to connect to GTK4 and GTK3 Broadway sessions. For each session, a new Docker container gets started containing the user's home directory and the Broadway service with all registered GTK3/4 apps started. After a session gets closed, the used container will be destroyed (preserving the user's home). All files inside the user's home are also accessible via a basic file manager in the web UI. The files as well as sessions are protected so that only the user has access to his sessions.
 
 Notes:
